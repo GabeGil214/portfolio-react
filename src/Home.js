@@ -1,3 +1,6 @@
+import React from 'react';
+import SocialMedia from './SocialMedia';
+
 function Home(){
   return (
     <div className="hero">
@@ -11,3 +14,5 @@ function Home(){
     </div>
   )
 }
+
+export default Home;

@@ -1,3 +1,6 @@
+import React from 'react';
+import ProjectTile from './ProjectTile';
+
 function Projects() {
   return (
     <div className="container-full">
@@ -10,3 +13,5 @@ function Projects() {
     </div>
   )
 }
+
+export default Projects;
