@@ -1,14 +1,19 @@
 import React from 'react';
 import ProjectTile from './ProjectTile';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
+import useStyles from './assets/styles.js';
+import Grid from '@material-ui/core/Grid';
+
 
 function Projects(props) {
   const { value, index, ...other } = props;
+  const classes = useStyles();
 
   return (
-    <Typography
-      className="hero"
+    <Grid
+      container
+      alignItems="center"
+      className={classes.container}
       component="div"
       role="tabpanel"
       hidden={value !== index}
@@ -16,13 +21,19 @@ function Projects(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
       >
-      <h1>Projects</h1>
-      <div className="projects-row">
-        <ProjectTile />
-        <ProjectTile />
-        <ProjectTile />
-      </div>
-    </Typography>
+      <Grid item xs={12} centered className={classes.space}>
+        <h1>Projects</h1>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          >
+          <ProjectTile />
+          <ProjectTile />
+          <ProjectTile />
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 
