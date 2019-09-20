@@ -10,6 +10,8 @@ function About(props){
   return (
     <Grid
       container
+      md={8}
+      xl={6}
       alignItems="center"
       className={classes.container}
       component="div"
@@ -21,9 +23,9 @@ function About(props){
     >
       <Grid item xs={12} className={classes.space}>
         <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, elit in tempor iaculis, velit
-          lorem scelerisque magna, vitae mollis quam enim nec lorem. Quisque sollicitudin lobortis sapien a accumsan. Duis ut magna lectus.
-          Sed volutpat ultrices mi a viverra. Fusce ultrices elit dignissim volutpat vehicula.</p>
+        <p>I am a self-taught developer who has been learning web development
+          for the past 2 years, with a focus on front-end development and in particular,
+          the React framework. In my spare time I enjoy photography, playing music, and staying active.</p>
       </Grid>
     </Grid>
   )

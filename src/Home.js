@@ -12,6 +12,8 @@ function Home(props){
   return (
     <Grid
       container
+      md={8}
+      xl={6}
       alignItems="center"
       className={classes.container}
       component="div"
@@ -22,8 +24,8 @@ function Home(props){
       {...other}
       >
       <Grid item xs={12} sm={6} className={classes.space}>
-        <h1 id="name"><span>I'm</span> Gabe Gil</h1>
-        <p id="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, elit in tempor iaculis, velit lorem scelerisque magna, vitae mollis quam enim nec lorem. Quisque sollicitudin lobortis sapien a accumsan. Duis ut magna lectus. Sed volutpat ultrices mi a viverra. Fusce ultrices elit dignissim volutpat vehicula.</p>
+        <Typography variant="h1" className={classes.name}><span>Hi, I'm</span> Gabe Gil</Typography>
+        <Typography variant="p" className={classes.textRight}>React Web Developer</Typography>
       </Grid>
       <Grid container direction="row" justify="center" xs={12} sm={6} spacing={4} className={classes.space}>
         <SocialMedia />

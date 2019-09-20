@@ -3,9 +3,9 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import './App.css';
-import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
+import useStyles from './assets/styles.js';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
-import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,18 +19,6 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: '#000',
-    color: '#FFF',
-    height: '100vh'
-  },
-  transparent: {
-    background: 'transparent'
-  }
-}));
 
 const StyledTabs = withStyles({
   indicator: {
@@ -76,9 +64,8 @@ export default function App() {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.root}>
-        <AppBar
-          position="static"
-          className={classes.transparent}>
+        <div
+          className={classes.appBar}>
           <StyledTabs
             value={value}
             onChange={handleChange}
@@ -89,17 +76,17 @@ export default function App() {
             <StyledTab label="About" {...a11yProps(1)} />
             <StyledTab label="Projects" {...a11yProps(2)} />
           </StyledTabs>
-        </AppBar>
-        <Container maxWidth='md'>
-          <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={value}
-            onChangeIndex={handleChangeIndex}
-            >
-            <Home value={value} index={0} />
-            <About value={value} index={1} />
-            <Projects value ={value} index={2} />
-          </SwipeableViews>
+        </div>
+        <Container maxWidth='xl' className={classes.viewContainer}>
+            <SwipeableViews
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+              index={value}
+              onChangeIndex={handleChangeIndex}
+              >
+              <Home value={value} index={0} />
+              <About value={value} index={1} />
+              <Projects value ={value} index={2} />
+            </SwipeableViews>
         </Container>
       </div>
     </React.Fragment>
