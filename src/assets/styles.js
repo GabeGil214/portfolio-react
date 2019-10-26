@@ -43,9 +43,11 @@ const useStyles = makeStyles(theme => ({
     left: '202px',
   },
   icon: {
-    color: 'white',
     margin: '5px',
     fontSize: '1.5rem',
+    '& > a': {
+      color: 'white'
+    },
   }
 }))
 
