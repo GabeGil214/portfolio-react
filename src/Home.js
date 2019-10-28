@@ -12,7 +12,9 @@ function Home(props){
   return (
     <Grid
       container
-      md={8}
+      sm={12}
+      md={10}
+      lg={8}
       xl={6}
       alignItems="center"
       className={classes.container}
@@ -23,11 +25,11 @@ function Home(props){
       aria-labelledby={`simple-tab-${index}`}
       {...other}
       >
-      <Grid item xs={12} sm={6} className={classes.space}>
+      <Grid item sm={12} md={6} className={classes.space} alignItems="center">
         <Typography variant="h1" className={classes.name}><span>Hi, I'm</span> Gabe Gil</Typography>
         <Typography variant="p" className={classes.textRight}>React Web Developer</Typography>
       </Grid>
-      <Grid container direction="row" justify="center" xs={12} sm={6} spacing={4} className={classes.space}>
+      <Grid container direction="row" justify="center" sm={12} md={6} spacing={4} className={classes.space}>
         <SocialMedia />
       </Grid>
     </Grid>

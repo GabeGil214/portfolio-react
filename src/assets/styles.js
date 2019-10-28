@@ -48,6 +48,10 @@ const useStyles = makeStyles(theme => ({
     '& > a': {
       color: 'white'
     },
+  },
+  tile: {
+    margin: '15px 0',
+    padding: '10px 0',
   }
 }))
 
