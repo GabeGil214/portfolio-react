@@ -50,8 +50,19 @@ const useStyles = makeStyles(theme => ({
     },
   },
   tile: {
-    margin: '15px 0',
+    margin: '5px 0',
     padding: '10px 0',
+  },
+  projectTile: {
+    textAlign: 'center',
+    maxWidth: '315px',
+    margin: '30px auto',
+  },
+  projectIcon: {
+    fontSize: '2rem',
+  },
+  title: {
+    marginBottom: '3rem'
   }
 }))
 
