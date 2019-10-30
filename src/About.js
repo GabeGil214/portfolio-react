@@ -10,8 +10,8 @@ function About(props){
   return (
     <Grid
       container
+      xs={10}
       md={8}
-      xl={6}
       alignItems="center"
       className={classes.container}
       component="div"
@@ -22,7 +22,7 @@ function About(props){
       {...other}
     >
       <Grid item xs={12} className={classes.space}>
-        <h1>About Me</h1>
+        <h1 className={classes.center}>About Me</h1>
         <p>I am a self-taught developer who has been learning web development
           for the past 2 years, with a focus on front-end development and in particular,
           the React framework. In my spare time I enjoy photography, playing music, and staying active.</p>

@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     height: '90vh',
     margin: '0 auto',
     overflowX: 'hidden',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    maxWidth: '1200px'
   },
   viewContainer: {
     display: 'flex',
@@ -33,14 +36,21 @@ const useStyles = makeStyles(theme => ({
   },
   name: {
     fontSize: '5rem',
+    fontWeight: '300',
+    lineHeight: '1',
+    margin: '10px 0',
     '& > span': {
       fontSize: '1rem',
       display: 'block',
     },
   },
+  nameSpace: {
+    padding: '0 15px',
+    maxWidth: '415px',
+  },
   textRight: {
     position: 'relative',
-    left: '202px',
+    left: '150px',
   },
   icon: {
     margin: '5px',

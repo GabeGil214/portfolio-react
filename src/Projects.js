@@ -26,8 +26,8 @@ function Projects(props) {
   return (
     <Grid
       container
-      md={8}
-      xl={6}
+      sm={12}
+      lg={8}
       alignItems="center"
       className={classes.container}
       component="div"
