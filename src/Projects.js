@@ -37,7 +37,7 @@ function Projects(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
       >
-      <Grid item xs={12} centered className={classes.space}>
+      <Grid item xs={12} centered className={`${classes.space} projects-container`}>
         <h1 className={classes.title}>Projects</h1>
         <Grid
           container
